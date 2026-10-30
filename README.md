@@ -264,7 +264,13 @@ Em 30/10/2026, a publicação passou por **39 verificações remotas e 14 testes
 
 O projeto reúne desenvolvimento Full Stack com React, TypeScript, Python e APIs REST; SQL e modelagem relacional; visualização de dados; modelagem financeira e interpretação de cenários. Pytest, Vitest e Playwright exercitam regressão, contratos e navegação. Hashes, fontes preservadas e documentação tornam os resultados reproduzíveis. A integração contínua foi verificada no GitHub Actions e a implantação de produção executada pela CLI Vercel.
 
-O **OpenAI Codex** apoiou implementação, revisão do código, automação de testes, conferência dos resultados, capturas, documentação, configuração de CI e execução do deploy. A automação verifica software e consistência dos cálculos, sem substituir pesquisa comercial real.
+## Uso do Codex e responsabilidade pelas decisões
+
+O **OpenAI Codex** foi utilizado como ferramenta de apoio para automatizar tarefas e acelerar o desenvolvimento, a execução de testes com Pytest, Vitest e Playwright, a conferência dos resultados financeiros, a revisão de código e a documentação. Também auxiliou na configuração do GitHub Actions, na publicação do repositório e na execução e verificação do deploy na Vercel.
+
+O trabalho foi conduzido com o **aval e a orientação da autora**, responsável por definir o problema de estudo, escolher as premissas, avaliar as recomendações e tomar as decisões sobre o projeto e sua publicação. O uso da ferramenta apoiou a execução dessas decisões; a aprovação e a responsabilidade pelo projeto permanecem com a autora.
+
+A automação verifica o funcionamento do software e a consistência dos cálculos, sem substituir pesquisa comercial real.
 
 ## Referências e licença
 
