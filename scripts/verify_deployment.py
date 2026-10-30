@@ -20,6 +20,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--api', required=True)
     parser.add_argument('--frontend')
+    parser.add_argument('--output', type=Path, default=ROOT/'docs/audit/production-evidence.json')
     args = parser.parse_args()
     api = args.api.rstrip('/')
     checks = {}
@@ -82,7 +83,8 @@ def main():
             with urlopen(origin+route, timeout=45) as response:
                 checks['spa:'+route] = response.status == 200 and b'<div id="root">' in response.read()
     report = {'verified_at':datetime.now(timezone.utc).isoformat(),'api':api,'frontend':args.frontend,'checks':checks,'failures':[key for key,value in checks.items() if not value]}
-    (ROOT/'docs/audit/production-evidence.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps({'checks':len(checks),'failures':report['failures']},ensure_ascii=False))
     if report['failures']: raise SystemExit(1)
 

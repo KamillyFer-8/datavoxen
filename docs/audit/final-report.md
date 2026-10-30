@@ -2,6 +2,8 @@
 
 Data: 30/10/2026. Escopo: código existente, fontes financeiras, documentação e preparação de publicação. Preservados design monocromático, motor financeiro e SQLite somente leitura. O [registro anterior às correções](initial-findings.md) separa os achados iniciais das ações posteriores.
 
+Este é o registro histórico anterior à autorização de publicação. O estado posterior de GitHub, CI e Vercel está no [relatório de publicação](publication-report.md).
+
 ## Achados por severidade e correções
 
 | Severidade | Problema | Correção e evidência |

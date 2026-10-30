@@ -28,4 +28,4 @@ Horizonte de 12 meses, cinco produtos e limites de entradas mantêm o cálculo p
 
 A base entregue é comparada em conteúdo com duas regenerações binariamente idênticas no mesmo ambiente; cabeçalhos SQLite podem variar entre versões da biblioteca nos sistemas. Integridade, chaves estrangeiras, contagens e equivalência dos 12 resultados completos são testadas. Tentativa de escrita falha. Downloads têm checksum verificado, inclusive correspondência byte a byte com o PDF original.
 
-A publicação real no provedor e a criação do remoto GitHub continuam etapas externas. A execução e análise local não precisam de credenciais.
+A publicação no GitHub e nos dois projetos Vercel foi executada após autorização, com verificações em produção registradas no [relatório de publicação](../audit/publication-report.md). A execução e análise local continuam sem exigir credenciais.

@@ -4,6 +4,8 @@ O Datavoxen é uma plataforma de Business Intelligence e simulação financeira 
 
 **Os parâmetros econômicos são hipóteses sintéticas, e não vendas observadas.** O propósito é explicitar como escolhas de produto, aquisição e custos afetam a decisão de investir.
 
+[Aplicação pública](https://datavoxen.vercel.app) · [API e OpenAPI](https://datavoxen-api.vercel.app/docs) · [Repositório](https://github.com/KamillyFer-8/datavoxen)
+
 ![Dashboard real da aplicação no computador](docs/screenshots/dashboard-desktop.png)
 
 ## Origem e motivação
@@ -211,7 +213,7 @@ Nova execução pré-publicação em 30/10/2026: **52 testes Pytest, quatro test
 
 O [manifesto SHA-256](backend/data/manifest.json) registra tamanho e hash de cada arquivo público. `audit_release.py` confere esses registros e grava [evidências em JSON](docs/audit/data-evidence.json). Para um arquivo isolado: `Get-FileHash backend/data/datavoxen.sqlite3 -Algorithm SHA256` no PowerShell ou `shasum -a 256 backend/data/datavoxen.sqlite3` no macOS/Linux. Regenerações são comparadas no mesmo ambiente; versões diferentes da biblioteca SQLite podem produzir diferenças binárias sem diferença de conteúdo.
 
-GitHub Actions prepara auditoria, reconstrução, Pytest, Vitest e build. Sua execução remota depende de publicar o repositório. Consulte o [relatório final](docs/audit/final-report.md) para resultados e limites de verificação.
+GitHub Actions executa auditoria, reconstrução, Pytest, Vitest e build a cada push. A [primeira execução remota](https://github.com/KamillyFer-8/datavoxen/actions/runs/41102892363) passou nos dois jobs, reproduzindo os resultados em checkout limpo no Linux. Consulte o [relatório de publicação](docs/audit/publication-report.md). A [auditoria anterior](docs/audit/final-report.md) permanece como registro histórico.
 
 ## Execução local
 
@@ -248,19 +250,21 @@ npm run dev
 
 Abra [a aplicação local](http://127.0.0.1:5173/), [a API](http://127.0.0.1:8000/api/health) e [a documentação OpenAPI](http://127.0.0.1:8000/docs). O frontend usa `127.0.0.1:5173`, conforme o comando Vite configurado; isso evita depender da resolução IPv4/IPv6 de localhost. Os dois processos precisam permanecer ligados. O Vite encaminha `/api` para a API local. Não há variável obrigatória localmente. `CORS_ORIGINS` é opcional no processo da API; `VITE_API_URL`, no frontend, define outra origem e exige rebuild. Consulte os arquivos `.env.example`.
 
-## Preparação para deploy
+## Publicação na Vercel
 
-São previstos dois projetos Vercel no mesmo repositório. A API usa Root Directory `backend`, entrada `index.py`, instalação de `requirements.txt`, inclusão explícita de `data/**` e duração máxima de 30 segundos. O frontend usa Root Directory `frontend`, preset Vite, build `npm run build` e saída `dist`. Configure `VITE_API_URL` com a origem HTTPS da API e `CORS_ORIGINS` com a origem exata do frontend.
+Foram publicados dois projetos Vercel no mesmo repositório. A API usa Root Directory `backend`, entrada `index.py`, Python 3.13, instalação de `requirements.txt`, inclusão explícita de `data/**` e duração máxima configurada em 30 segundos. O frontend usa Root Directory `frontend`, Node.js 24, preset Vite, instalação `npm ci`, build `npm run build` e saída `dist`.
+
+`VITE_API_URL` aponta para `https://datavoxen-api.vercel.app`; `CORS_ORIGINS` permite a origem exata `https://datavoxen.vercel.app`. São endereços públicos de configuração, sem segredos. A implantação foi executada pela CLI a partir de commits do GitHub. A conexão com o repositório está configurada, mas deploy automático a cada push não foi habilitado.
 
 O SQLite é um recurso fixo do bundle, sem escritas nem dependência de persistência entre invocações. A Vercel [não oferece persistência de um SQLite gravável em funções](https://vercel.com/kb/guide/is-sqlite-supported-in-vercel); este projeto usa leitura de um snapshot empacotado. A configuração segue a [integração FastAPI](https://vercel.com/docs/frameworks/backend/fastapi) e o [rewrite SPA Vite](https://vercel.com/docs/frameworks/frontend/vite).
 
-**Não foi realizado deploy, nem verificado um bundle remoto nesta auditoria.** A leitura local foi testada; a inclusão efetiva dos arquivos e os fluxos no provedor exigem preview autorizado. O [guia de deploy](docs/architecture/deploy.md) descreve configuração e verificações necessárias. Não houve push para GitHub ou publicação em produção.
+Em 30/10/2026, a publicação passou por **39 verificações remotas e 14 testes E2E em produção**, comparando as 12 referências completas com a base local, oito downloads com SHA-256, simulação personalizada, CSV/PDF, CORS e recarregamento de rotas SPA. O SQLite baixado antes e depois de simular permaneceu idêntico. As 12 combinações também foram conferidas no dashboard, e o PDF foi baixado pela interface. O [relatório de publicação](docs/audit/publication-report.md), as [evidências de API](docs/audit/production-evidence.json) e a [matriz no navegador](docs/audit/browser-matrix.json) registram a validação. O [guia de deploy](docs/architecture/deploy.md) conserva as instruções para reproduzir a implantação.
 
 ## Tecnologias e competências demonstradas
 
-O projeto reúne desenvolvimento Full Stack com React, TypeScript, Python e APIs REST; SQL e modelagem relacional; visualização de dados; modelagem financeira e interpretação de cenários. Pytest, Vitest e Playwright exercitam regressão, contratos e navegação. Hashes, fontes preservadas e documentação tornam os resultados reproduzíveis. O workflow demonstra preparação de integração contínua; deploy contínuo em produção ainda não foi executado.
+O projeto reúne desenvolvimento Full Stack com React, TypeScript, Python e APIs REST; SQL e modelagem relacional; visualização de dados; modelagem financeira e interpretação de cenários. Pytest, Vitest e Playwright exercitam regressão, contratos e navegação. Hashes, fontes preservadas e documentação tornam os resultados reproduzíveis. A integração contínua foi verificada no GitHub Actions e a implantação de produção executada pela CLI Vercel.
 
-O **OpenAI Codex** apoiou implementação, revisão do código, automação de testes, conferência dos resultados, capturas, documentação e preparação das configurações de CI e deploy. A automação verifica software e consistência dos cálculos, sem substituir pesquisa comercial real.
+O **OpenAI Codex** apoiou implementação, revisão do código, automação de testes, conferência dos resultados, capturas, documentação, configuração de CI e execução do deploy. A automação verifica software e consistência dos cálculos, sem substituir pesquisa comercial real.
 
 ## Referências e licença
 

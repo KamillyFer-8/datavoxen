@@ -1,6 +1,6 @@
 # Preparação para GitHub e Vercel
 
-Estado em 30/10/2026: execução e build locais verificados; sem push, sem deploy e sem inspeção de bundle remoto. Esta preparação não afirma que exista uma URL pública funcionando.
+Estado em 30/10/2026: código [publicado no GitHub](https://github.com/KamillyFer-8/datavoxen), [frontend público](https://datavoxen.vercel.app) e [API pública](https://datavoxen-api.vercel.app/docs). O [relatório de publicação](../audit/publication-report.md) registra CI, commits e testes reais. O bundle Python remoto foi gerado e os oito arquivos distribuídos foram baixados e comparados ao manifesto; leitura do SQLite e exportações passaram em produção.
 
 ## Dois projetos no mesmo repositório
 
@@ -37,4 +37,6 @@ Os cálculos têm horizonte e catálogo fixos, validação numérica e limite de
 
 .gitignore exclui ambientes, dependências, caches, segredos locais, builds, output e imagens visuais de terceiros sem licença documentada. Não exclui o SQLite oficial. LICENSE contém MIT para o código; THIRD_PARTY_NOTICES.md separa os materiais do estudo.
 
-O workflow executa auditoria original, reconstrução, auditoria de distribuição, Pytest, Vitest e build. Nenhum segredo de deploy é necessário para essas verificações. A execução real no GitHub Actions só poderá ser confirmada após publicação autorizada. O ambiente Windows foi testado; os comandos macOS/Linux foram revisados, sem execução nesses sistemas nesta auditoria.
+O workflow executa auditoria original, reconstrução, auditoria de distribuição, Pytest, Vitest e build. Nenhum segredo de deploy é necessário para essas verificações. Os dois jobs passaram no GitHub Actions em checkout limpo no Linux, além da execução local Windows. Não houve execução nativa em macOS.
+
+Os projetos são datavoxen-api e datavoxen, na equipe ME. A implantação foi executada pela CLI oficial, com gitSource apontando para o commit publicado. Deploy automático por push permanece desabilitado. Para atualizar, repita a conferência, envie o commit e implante explicitamente o mesmo commit nos dois projetos, mantendo suas raízes e variáveis. As URLs canônicas públicas são as citadas acima; os endereços individuais de deployment não devem substituir VITE_API_URL.

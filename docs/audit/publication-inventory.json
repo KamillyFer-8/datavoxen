@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "candidate_count": 104,
+  "candidate_count": 106,
   "files": [
     ".env.example",
     ".gitattributes",
@@ -42,10 +42,12 @@
     "docs/architecture/decisions.md",
     "docs/architecture/deploy.md",
     "docs/architecture/visual-direction.md",
+    "docs/audit/browser-matrix.json",
     "docs/audit/data-evidence.json",
     "docs/audit/final-report.md",
     "docs/audit/initial-findings.md",
     "docs/audit/local-preflight.json",
+    "docs/audit/production-evidence.json",
     "docs/audit/publication-inventory.json",
     "docs/audit/publication-report.md",
     "docs/methodology/audit.md",

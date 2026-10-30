@@ -28,4 +28,39 @@ Os valores financeiros centrais continuam A −R$ 1.160.759,47; B −R$ 1.243.86
 
 ## Publicação remota
 
-Em execução. Resultados de GitHub Actions, URLs, commit e verificações em produção serão registrados após confirmação. Não inferir publicação a partir dos resultados locais acima.
+O repositório público [KamillyFer-8/datavoxen](https://github.com/KamillyFer-8/datavoxen) foi criado e o commit inicial `4897b429a76df30d63140eec6d2f90aebb39b5b9` enviado à branch main. O GitHub confirmou visibilidade pública e branch. O HTML do README contém a nova seção de dados, a hierarquia e as duas imagens desktop; os 12 binários remotos foram comparados aos hashes locais sem divergência.
+
+O [workflow inicial](https://github.com/KamillyFer-8/datavoxen/actions/runs/41102892363) concluiu com sucesso nos jobs backend e frontend. Os logs confirmam 45 checks originais, 32 verificações de distribuição, 52 testes Pytest, quatro Vitest e build, em checkout limpo no Linux.
+
+A integração Vercel recusou criação de projeto com 403; a responsável autorizou o login da CLI oficial, que realizou a implantação na mesma equipe ME. Não foram desativadas proteções para contornar o erro. As URLs canônicas de produção estão acessíveis anonimamente.
+
+| Recurso | Destino verificado |
+|---|---|
+| Repositório público | https://github.com/KamillyFer-8/datavoxen |
+| Frontend | https://datavoxen.vercel.app |
+| API / OpenAPI | https://datavoxen-api.vercel.app/docs |
+| Projeto API | datavoxen-api; root backend; Python 3.13; FastAPI |
+| Projeto web | datavoxen; root frontend; Node.js 24; Vite; npm ci; dist |
+| Variáveis | VITE_API_URL = origem canônica da API; CORS_ORIGINS = origem canônica do frontend |
+
+O build remoto Python produziu uma função de aproximadamente 18,93 MB. O runtime serviu os oito arquivos públicos com os hashes esperados, demonstrando a inclusão dos dados necessários no bundle. A leitura das 12 referências completas coincidiu com a base local. CSV/PDF gerados em produção passaram; o download do SQLite permaneceu idêntico antes e depois de simular. Nenhuma persistência de escrita foi introduzida.
+
+## Validação real em produção
+
+| Verificação | Resultado |
+|---|---|
+| scripts/verify_deployment.py | 39 verificações aprovadas, incluindo CORS e SPA |
+| Suíte Playwright na URL pública | 14 testes aprovados em uma execução completa, desktop/mobile |
+| Matriz de dashboard | 12 combinações selecionadas e valores conferidos |
+| PDF pela interface | Download concluído, além do teste do PDF via API |
+| Console do navegador na matriz | Nenhum erro de execução |
+
+Evidências: [API](production-evidence.json), [matriz do navegador](browser-matrix.json). As suítes exercitam dashboard, estratégias, produtos, coortes, finanças, benchmarking, relatórios, metodologia, acervo, JSON de hipóteses, erros, CSV, downloads, navegação e responsividade. Recarregamento de rotas internas foi conferido por requisição direta à SPA e navegação automatizada.
+
+O código da aplicação implantado foi inicialmente o commit `4897b429a76df30d63140eec6d2f90aebb39b5b9`. A revisão posterior de documentação, evidências e configuração dos testes é enviada à main e usada em novos deploys dos dois projetos, com o SHA final conferido no gitSource antes da entrega. O commit final é informado na conclusão da publicação, sem tentar gravar um hash de commit dentro do próprio commit.
+
+## Limites e operação
+
+Não há pendência de credencial para a publicação executada. Não houve teste de carga ou pentest; os resultados financeiros permanecem sintéticos. macOS não foi executado nativamente. Os avisos de depreciação do TestClient e comentários de dependências no build não impediram os checks.
+
+GitHub Actions está habilitado. Os projetos Vercel estão ligados ao GitHub, com produção implantada explicitamente pela CLI; deploy automático por push não foi habilitado. A configuração de SQLite continua somente leitura. Atualizações futuras exigem nova conferência e implantação, conforme o [guia de deploy](../architecture/deploy.md).

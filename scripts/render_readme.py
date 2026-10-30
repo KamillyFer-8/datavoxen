@@ -146,7 +146,7 @@ def build():
     from pypdf import PdfReader
     reader=PdfReader(OUTPUT)
     text='\n'.join(page.extract_text() for page in reader.pages)
-    for required in ['OpenAI Codex','Preparação para deploy','Limitações e validação futura','Contexto do mercado brasileiro','Cenários e resultados']:
+    for required in ['OpenAI Codex','Publicação na Vercel','Limitações e validação futura','Contexto do mercado brasileiro','Cenários e resultados']:
         assert required in text,required
     print(f'{OUTPUT}\n{len(reader.pages)} páginas | {OUTPUT.stat().st_size} bytes')
 
