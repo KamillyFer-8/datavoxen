@@ -1,0 +1,182 @@
+[
+  [
+    "144 estrategia x cenario x meses",
+    true
+  ],
+  [
+    "sem nulos",
+    true
+  ],
+  [
+    "receita por SKUs",
+    true
+  ],
+  [
+    "refund 2%",
+    true
+  ],
+  [
+    "plataforma base pos-reembolso",
+    true
+  ],
+  [
+    "imposto base pos-reembolso",
+    true
+  ],
+  [
+    "liquido 77.42%",
+    true
+  ],
+  [
+    "contabilidade reconciliada",
+    true
+  ],
+  [
+    "custo decomposicao",
+    true
+  ],
+  [
+    "resultado do mes",
+    true
+  ],
+  [
+    "compradores elegiveis",
+    true
+  ],
+  [
+    "soma de unidades = compradores",
+    true
+  ],
+  [
+    "caixa cumulativo A/central",
+    true
+  ],
+  [
+    "caixa utilizavel A/central",
+    true
+  ],
+  [
+    "caixa cumulativo A/conservador",
+    true
+  ],
+  [
+    "caixa utilizavel A/conservador",
+    true
+  ],
+  [
+    "caixa cumulativo A/estresse",
+    true
+  ],
+  [
+    "caixa utilizavel A/estresse",
+    true
+  ],
+  [
+    "caixa cumulativo A/otimista",
+    true
+  ],
+  [
+    "caixa utilizavel A/otimista",
+    true
+  ],
+  [
+    "caixa cumulativo B/central",
+    true
+  ],
+  [
+    "caixa utilizavel B/central",
+    true
+  ],
+  [
+    "caixa cumulativo B/conservador",
+    true
+  ],
+  [
+    "caixa utilizavel B/conservador",
+    true
+  ],
+  [
+    "caixa cumulativo B/estresse",
+    true
+  ],
+  [
+    "caixa utilizavel B/estresse",
+    true
+  ],
+  [
+    "caixa cumulativo B/otimista",
+    true
+  ],
+  [
+    "caixa utilizavel B/otimista",
+    true
+  ],
+  [
+    "caixa cumulativo C/central",
+    true
+  ],
+  [
+    "caixa utilizavel C/central",
+    true
+  ],
+  [
+    "caixa cumulativo C/conservador",
+    true
+  ],
+  [
+    "caixa utilizavel C/conservador",
+    true
+  ],
+  [
+    "caixa cumulativo C/estresse",
+    true
+  ],
+  [
+    "caixa utilizavel C/estresse",
+    true
+  ],
+  [
+    "caixa cumulativo C/otimista",
+    true
+  ],
+  [
+    "caixa utilizavel C/otimista",
+    true
+  ],
+  [
+    "determinismo A",
+    true
+  ],
+  [
+    "preco impacta receita A",
+    true
+  ],
+  [
+    "CAC impacta resultado A",
+    true
+  ],
+  [
+    "determinismo B",
+    true
+  ],
+  [
+    "preco impacta receita B",
+    true
+  ],
+  [
+    "CAC impacta resultado B",
+    true
+  ],
+  [
+    "determinismo C",
+    true
+  ],
+  [
+    "preco impacta receita C",
+    true
+  ],
+  [
+    "CAC impacta resultado C",
+    true
+  ]
+]

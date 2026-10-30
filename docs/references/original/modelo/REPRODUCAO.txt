@@ -1,0 +1,1 @@
+Modelo de referência e premissas sintéticas. Execute build_datavoxen_revised.py. Fontes e limitações descritas no PDF.

@@ -1,0 +1,13 @@
+DATAVOXEN | Registro de conferência documental | 29/10/2026
+
+Evidências verificadas neste fechamento (links públicos; transcrições concisas, não capturas de tela):
+1. Fortnite App Store BR: https://apps.apple.com/br/app/fortnite/id6483539426
+   Ofertas exibidas: 800 V-Bucks R$ 31,99; 2.400 V-Bucks R$ 79,00; Clube Fortnite R$ 38,00.
+   Fonte: App Store BR. Canal iOS — NÃO transferir preço automaticamente ao Android.
+2. Apple Developer, Brasil: https://developer.apple.com/br/support/payment-options-on-the-app-store-in-brazil/
+   Comissões publicadas: 21% em venda digital padrão; 10% em programas elegíveis/assinaturas após o primeiro ano; processamento Apple 5% quando aplicável. A documentação contempla outras condições por tipo de pagamento. Não são percentuais cumulativos universais.
+3. StatCounter Android: https://gs.statcounter.com/os-market-share/mobile/brazil
+   Série Mobile, Brasil, setembro/2026: Android 78,78% (tráfego de navegadores móveis; NÃO instalações de jogos ou participação de receita).
+   Série distinta mobile/tablet: https://gs.statcounter.com/os-market-share/mobile-tablet/brazil (78,83% no resultado corrente). Os denominadores diferem.
+
+ATENÇÃO: o registro acima contém dados consultados e URLs, não prints forenses das páginas. Outros preços históricos no relatório dependem de reconfirmação no próprio canal no momento de uso comercial. Os dados de mercado não validam taxas de conversão/retencão do jogo hipotético.

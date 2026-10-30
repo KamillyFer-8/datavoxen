@@ -1,0 +1,9 @@
+# Preserve os bytes dos documentos originais, CSVs e checksums em qualquer sistema.
+* text=auto eol=lf
+backend/data/** -text
+docs/references/** -text
+*.sqlite3 binary
+*.pdf binary
+*.zip binary
+*.png binary
+*.jpg binary

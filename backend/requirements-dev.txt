@@ -1,0 +1,5 @@
+-r requirements.txt
+pytest==9.0.2
+pypdf==6.9.1
+pandas==3.0.1
+httpx==0.28.1

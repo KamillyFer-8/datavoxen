@@ -1,0 +1,95 @@
+export type Strategy = "A" | "B" | "C";
+export type Scenario = "central" | "conservador" | "otimista" | "estresse";
+export type ProductKey = "traje" | "efeito" | "colecao" | "passe" | "sazonal";
+export type Parameters = {
+  cac: number;
+  acq: number;
+  eng: number;
+  spend: number;
+  opex: number;
+  elasticity: number;
+  price_mult: Record<ProductKey, number>;
+  activity: number[];
+  capital: number;
+  reserve: number;
+  fee: number;
+  tax: number;
+  refund: number;
+  operations: number;
+  production: number;
+  content: number;
+  unit_cost: Record<ProductKey, number>;
+  attractiveness: Record<ProductKey, number>;
+};
+export type SimulationInput = {
+  strategy: Strategy;
+  scenario: Scenario;
+  name?: string;
+  overrides?: Partial<Parameters>;
+};
+export type Month = Record<string, number> & {
+  month: number;
+  gross: number;
+  net: number;
+  flow: number;
+  cash: number;
+  active: number;
+  new: number;
+  buyers: number;
+};
+export type Summary = Record<string, number | null> & {
+  gross: number;
+  net: number;
+  flow: number;
+  costs: number;
+  cash: number;
+  reserve: number;
+  acquired: number;
+  active_player_months: number;
+  cac: number;
+  arpu: number;
+  ltv_partial: number;
+  recoverable_contribution: number;
+};
+export type Cohort = {
+  cohort_month: number;
+  horizon_months: number;
+  acquired: number;
+  active_player_months: number;
+  gross: number;
+  contribution_before_CAC: number;
+  contribution_per_acquired: number;
+  CAC: number;
+  net_after_CAC: number;
+};
+export type Result = {
+  model_version: string;
+  model_hash: string;
+  strategy: Strategy;
+  scenario: Scenario;
+  parameters: Parameters;
+  summary: Summary;
+  months: Month[];
+  cohorts: Cohort[];
+  products: {
+    id: string;
+    name: string;
+    price: number;
+    probability: number;
+    units: number;
+    gross: number;
+  }[];
+  none_probability: number;
+};
+export type Benchmark = {
+  game: string;
+  product: string;
+  offer_type: string;
+  price: number;
+  currency: string;
+  channel: string;
+  consulted_at: string;
+  source_url: string;
+  verification_status: string;
+  limitations: string;
+};

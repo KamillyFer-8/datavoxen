@@ -1,0 +1,46 @@
+AUDITORIA REPRODUZIVEL | 29/10/2026
+PASS | 144 estrategia x cenario x meses
+PASS | sem nulos
+PASS | receita por SKUs
+PASS | refund 2%
+PASS | plataforma base pos-reembolso
+PASS | imposto base pos-reembolso
+PASS | liquido 77.42%
+PASS | contabilidade reconciliada
+PASS | custo decomposicao
+PASS | resultado do mes
+PASS | compradores elegiveis
+PASS | soma de unidades = compradores
+PASS | caixa cumulativo A/central
+PASS | caixa utilizavel A/central
+PASS | caixa cumulativo A/conservador
+PASS | caixa utilizavel A/conservador
+PASS | caixa cumulativo A/estresse
+PASS | caixa utilizavel A/estresse
+PASS | caixa cumulativo A/otimista
+PASS | caixa utilizavel A/otimista
+PASS | caixa cumulativo B/central
+PASS | caixa utilizavel B/central
+PASS | caixa cumulativo B/conservador
+PASS | caixa utilizavel B/conservador
+PASS | caixa cumulativo B/estresse
+PASS | caixa utilizavel B/estresse
+PASS | caixa cumulativo B/otimista
+PASS | caixa utilizavel B/otimista
+PASS | caixa cumulativo C/central
+PASS | caixa utilizavel C/central
+PASS | caixa cumulativo C/conservador
+PASS | caixa utilizavel C/conservador
+PASS | caixa cumulativo C/estresse
+PASS | caixa utilizavel C/estresse
+PASS | caixa cumulativo C/otimista
+PASS | caixa utilizavel C/otimista
+PASS | determinismo A
+PASS | preco impacta receita A
+PASS | CAC impacta resultado A
+PASS | determinismo B
+PASS | preco impacta receita B
+PASS | CAC impacta resultado B
+PASS | determinismo C
+PASS | preco impacta receita C
+PASS | CAC impacta resultado C

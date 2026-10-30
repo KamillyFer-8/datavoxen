@@ -1,0 +1,34 @@
+{
+  "comparacao-cenarios.csv": {
+    "bytes": 3131,
+    "sha256": "32a0bbe18ec37d9509905eeb2843f6bd0263b0ed590c8287227c22844113a57c"
+  },
+  "coortes-originais.csv": {
+    "bytes": 3487,
+    "sha256": "bd2e96b40ca1b86184bde5cf2fb7f1f02f894697bf1e92d9da4a5382680c2ade"
+  },
+  "datavoxen.sqlite3": {
+    "bytes": 167936,
+    "sha256": "570449b87baf9e57d28f40b9e9bebb88bd9d302620d4b457af46789e2100760b"
+  },
+  "estudo-original.pdf": {
+    "bytes": 107660,
+    "sha256": "8883021642c35a224475f36f0c86596637a077f9faa3c273637d44cd4ca334ea"
+  },
+  "modelo-original.zip": {
+    "bytes": 43776,
+    "sha256": "7ff0fbee13e881cfce9362a4983909385221a7036f6423aa3cd9251f94be47e8"
+  },
+  "premissas.json": {
+    "bytes": 2032,
+    "sha256": "46e86132b51eec73b722d78d38a219f16c157630f771147a6d7879d83cacb562"
+  },
+  "projecao-original.csv": {
+    "bytes": 47715,
+    "sha256": "b945dad0b15e79303235c69613ec16e9816e68fe3b03f34d0d783526891f849a"
+  },
+  "sensibilidade-original.csv": {
+    "bytes": 3231,
+    "sha256": "e0f3faa3cb332aeebf72b590f3c55737d8042438ca404f09ac0964f99213e542"
+  }
+}

@@ -1,0 +1,25 @@
+.venv/
+node_modules/
+dist/
+__pycache__/
+.pytest_cache/
+.pytest-tmp/
+.env
+.env.local
+.env.*
+!.env.example
+*.db
+test-results/
+playwright-report/
+.vercel/
+*.tsbuildinfo
+tmp/
+backend/data/tmp*/
+# Capturas mobile ficam apenas para conferência local de responsividade.
+docs/screenshots/*-mobile.png
+output/prints/mobile/
+output/
+docs/references/visual-*.jpg
+docs/references/report-text.txt
+docs/references/report-pages/
+docs/references/report-page-*.png
